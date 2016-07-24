@@ -1,0 +1,20 @@
+<%= form_for @car do |f| %>
+
+    <div class="form-group">
+      <%= f.label :brand %>
+      <%= f.text_field :brand, autocomplete: "off", class: "form-control"  %>
+    </div>
+
+
+    <div class="form-group" data-no-turbolink>
+      <%= f.label :reg_number, 'Registration number' %>
+      <%= f.text_field :reg_number, autocomplete: "off", class: "form-control ckeditor" %>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit "Save", class: "btn btn-primary"  %>
+    </div>
+
+<% end %>
