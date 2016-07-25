@@ -1,15 +1,20 @@
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>Brand</th>
+        <th>Avarage mileage</th>
+        <th>Full mileage</th>
+      </tr>
   <% @cars.each do |car| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <div class = "caption">
-          <h3><%= car.brand %></h3>
-          <h6>
-            Avarage mileage: <span class="badge"><%= car.mileages.average(:value) %></span>
-          </h6>
-          <h6>
-            Full mileage: <span class="badge"><%= car.mileages.sum(:value) %></span>
-          </h6>
-        </div>
-      </div>
-    </div>
+    <tr>
+          <td><%= link_to car.brand, car_path(car) %></td>
+          <td>
+             <%= link_to car.mileages.average(:value).presence || "0", car_path(car) %>
+          </td>
+          <td>
+            <%= link_to car.mileages.sum(:value), car_path(car) %>
+          </td>
+    </tr>
   <% end %>
+  </tbody>
+  </table>

@@ -1,8 +1,15 @@
 <div class="panel-heading">
-        <p><span class="label label-default"><%= @car.brand %></span>  reg number: <%= @car.reg_number %>,
-           <%= @car.updated_at %>
-        </p>
+        <h1><%= @car.brand %></h1>
+        <h3><%= "Registration number: #{@car.reg_number}" %></h3>
+        <h6><%= "Created at #{@car.updated_at}" %></h6>
+        <h6>
+          <span><%= "Avarage milages: #{@car.mileages.average(:value).presence || "0"}" %></span>
+          <span><%= "Full milages: #{@car.mileages.sum(:value)}"%></span>
+        </h6>
 
-        <%= render 'mileages/form', mileage: Mileage.new(car_id: @car.id) %>
+
         <%= render 'mileages/index', mileages: @car.mileages %>
+        <% if user_signed_in? %>
+          <%= render 'mileages/form', mileage: Mileage.new(car_id: @car.id) %>
+        <% end %>
 </div>

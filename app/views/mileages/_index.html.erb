@@ -1,13 +1,21 @@
 <h3>Mileage</h3>
-
-  <% mileages.each do |mileage| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h5><%= mileage.value %>,
-        <%= mileage.created_at %></h5>
-        <p><%= mileage.user %></p>
-        <p><%= mileage.month %></p>
-        <p><%= mileage.year %></p>
-      </div>
-    </div>
-  <% end %>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Value</th>
+      <th>Created at</th>
+      <th>User</th>
+      <th>Month</th>
+      <th>Year</th>
+    </tr>
+    <% mileages.each do |mileage| %>
+      <tr>
+        <td><%= mileage.value %></td>
+        <td><%= mileage.created_at %></td>
+        <td><%= mileage.user.email %></td>
+        <td><%= mileage.month %></td>
+        <td><%= mileage.year %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
