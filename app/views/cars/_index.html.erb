@@ -2,12 +2,14 @@
     <tbody>
       <tr>
         <th>Brand</th>
+        <th>Registration number</th>
         <th>Avarage mileage</th>
         <th>Full mileage</th>
       </tr>
   <% @cars.each do |car| %>
     <tr>
           <td><%= link_to car.brand, car_path(car) %></td>
+          <td><%= link_to car.reg_number, car_path(car) %></td>
           <td>
              <%= link_to "#{car.mileages.presence ? car.mileages.average(:value).round : "0"}", car_path(car) %>
           </td>
