@@ -5,24 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Rails version 4.2.4
 
 * System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
 * How to run the test suite
+  rspec spec/features
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*clone
+ https://github.com/czarian/car_fleet.git
 
 
-Please feel free to use a different markup language if you do not plan to run
+ *Whats next
+  Deploy on heroku
+
 <tt>rake doc:app</tt>.
