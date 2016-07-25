@@ -9,7 +9,7 @@
     <tr>
           <td><%= link_to car.brand, car_path(car) %></td>
           <td>
-             <%= link_to car.mileages.average(:value).presence || "0", car_path(car) %>
+             <%= link_to "#{car.mileages.presence ? car.mileages.average(:value).round : "0"}", car_path(car) %>
           </td>
           <td>
             <%= link_to car.mileages.sum(:value), car_path(car) %>

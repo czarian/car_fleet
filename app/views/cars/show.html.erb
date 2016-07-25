@@ -3,8 +3,8 @@
         <h3><%= "Registration number: #{@car.reg_number}" %></h3>
         <h6><%= "Created at #{@car.updated_at}" %></h6>
         <h6>
-          <span><%= "Avarage milages: #{@car.mileages.average(:value).presence || "0"}" %></span>
-          <span><%= "Full milages: #{@car.mileages.sum(:value)}"%></span>
+          <span><%= "Avarage milages: #{@car.mileages.presence ? @car.mileages.average(:value).round : "0"}" %></span>
+          <span><%= "Full milages: #{@car.mileages.sum(:value).round}"%></span>
         </h6>
 
 
