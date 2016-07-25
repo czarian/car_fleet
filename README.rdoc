@@ -1,8 +1,9 @@
 == README
 
-* Rails version 4.2.4
+*Rails version
+ *4.2.4
 
-* How to run the test suite
+*clone
   *rspec spec/features
 
 *clone
