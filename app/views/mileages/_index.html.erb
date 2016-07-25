@@ -13,7 +13,7 @@
         <td><%= mileage.value %></td>
         <td><%= mileage.created_at %></td>
         <td><%= mileage.user.email %></td>
-        <td><%= mileage.month %></td>
+        <td><%= Date::MONTHNAMES[mileage.month] %></td>
         <td><%= mileage.year %></td>
       </tr>
     <% end %>
