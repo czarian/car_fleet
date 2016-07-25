@@ -1,10 +1,5 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Rails version 4.2.4
 
 * System dependencies
@@ -15,8 +10,7 @@ Things you may want to cover:
 *clone
  https://github.com/czarian/car_fleet.git
 
-
- *Whats next
+ *What next
   Deploy on heroku
 
 <tt>rake doc:app</tt>.
