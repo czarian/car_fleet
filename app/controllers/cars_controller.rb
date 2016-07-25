@@ -3,9 +3,11 @@ class CarsController < ApplicationController
   before_action :authenticate_user!,  only: [:create]
 
   def index
+    @cars = Car.all
   end
 
   def show
+    @car = Car.find(params[:id])
   end
 
   def new
@@ -13,7 +15,6 @@ class CarsController < ApplicationController
   end
 
   def create
-
     @car = Car.new(car_params)
     @car.user = current_user
     if @car.save

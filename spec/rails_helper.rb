@@ -31,7 +31,6 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
   FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, :type => :controller
   config.include Warden::Test::Helpers
@@ -39,7 +38,7 @@ RSpec.configure do |config|
     Warden.test_mode!
   end
 
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
   DatabaseCleaner.strategy = :truncation
   config.before :each do
     DatabaseCleaner.start

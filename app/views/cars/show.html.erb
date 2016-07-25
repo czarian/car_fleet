@@ -1,0 +1,8 @@
+<div class="panel-heading">
+        <p><span class="label label-default"><%= @car.brand %></span>  reg number: <%= @car.reg_number %>,
+           <%= @car.updated_at %>
+        </p>
+
+        <%= render 'mileages/form', mileage: Mileage.new(car_id: @car.id) %>
+        <%= render 'mileages/index', mileages: @car.mileages %>
+</div>

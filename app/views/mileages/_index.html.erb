@@ -1,0 +1,13 @@
+<h3>Mileage</h3>
+
+  <% mileages.each do |mileage| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h5><%= mileage.value %>,
+        <%= mileage.created_at %></h5>
+        <p><%= mileage.user %></p>
+        <p><%= mileage.month %></p>
+        <p><%= mileage.year %></p>
+      </div>
+    </div>
+  <% end %>
