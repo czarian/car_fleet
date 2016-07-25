@@ -2,15 +2,12 @@
 
 * Rails version 4.2.4
 
-* System dependencies
-
 * How to run the test suite
-  rspec spec/features
+  *rspec spec/features
 
 *clone
- https://github.com/czarian/car_fleet.git
+ *https://github.com/czarian/car_fleet.git
 
- *What next
-  Deploy on heroku
+*What next
+  *Deploy on heroku
 
-<tt>rake doc:app</tt>.
